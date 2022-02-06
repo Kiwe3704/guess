@@ -5,11 +5,16 @@
 
 import random
 
-r = random.randint(1, 100)
+start = input('請決定開始值: ')
+start = int(start)
+end = input('請決定結束值: ')
+end = int(end)
+
+r = random.randint(start, end)
 count = 0
 while True:
     count += 1 # count = count + 1
-    num = input('請輸入1~100之間的數字')
+    num = input('請輸入數字')
     num = int(num)
     if num == r:
         print("猜中了",)
@@ -20,3 +25,4 @@ while True:
     elif num < r:
         print('再大一點')
     print('這是你猜第', count, '次')
+    
